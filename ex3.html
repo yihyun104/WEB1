@@ -28,14 +28,18 @@
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-
     <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';">
-
+      var target = document.querySelector('body');
+      if(this.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+      }
+    ">
       <ol>
         <li><a href="1.html">HTML</a></li>
         <li><a href="2.html">CSS</a></li>
@@ -44,5 +48,16 @@
 
     <h2 style="background-color:coral; color:powderblue;">JavaScript란 무엇인가?</h2>
     <p><span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside <span>HTML</span> and <span>CSS</span>.[11] Over 97% of websites use <span class="js">JavaScript</span> on the client side for web page behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated <span class="js">JavaScript</span> engine to execute the code on users' devices. <span class="js">JavaScript</span> is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).</p>
-  </body>
+    <input type="button" value="night" onclick="
+      var target = document.querySelector('body');
+      if(this.value === 'night') {
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value = 'day';
+      } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value = 'night';
+      }
+    ">  </body>
 </html>
